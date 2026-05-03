@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asher Maret Â· A Life in Photographs</title>
+  <title>Asher Maret  A Life in Photographs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
@@ -34,7 +34,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ââ TITLE PAGE ââ */
+    /*  TITLE PAGE  */
     #title-page {
       min-height: 100vh;
       display: flex;
@@ -138,7 +138,7 @@
       animation: scrollPulse 2s ease-in-out infinite;
     }
 
-    /* ââ CHAPTERS NAV ââ */
+    /*  CHAPTERS NAV  */
     #chapter-nav {
       position: sticky;
       top: 0;
@@ -188,7 +188,7 @@
       color: var(--accent);
     }
 
-    /* ââ CHAPTER SECTION ââ */
+    /*  CHAPTER SECTION  */
     .chapter-section {
       padding: 6rem 2rem 2rem;
     }
@@ -230,7 +230,7 @@
       margin-top: 0.4rem;
     }
 
-    /* ââ PHOTO GRID ââ */
+    /*  PHOTO GRID  */
     .photo-grid {
       max-width: 900px;
       margin: 0 auto;
@@ -288,7 +288,7 @@
       margin-left: 0.75rem;
     }
 
-    /* ââ CHAPTER DIVIDER ââ */
+    /*  CHAPTER DIVIDER  */
     .chapter-divider {
       max-width: 900px;
       margin: 5rem auto 0;
@@ -296,7 +296,7 @@
       border-top: 1px solid var(--stone);
     }
 
-    /* ââ CLOSING PAGE ââ */
+    /*  CLOSING PAGE  */
     #closing-page {
       min-height: 60vh;
       display: flex;
@@ -342,7 +342,7 @@
       color: var(--mid);
     }
 
-    /* ââ LIGHTBOX ââ */
+    /*  LIGHTBOX  */
     #lightbox {
       position: fixed;
       inset: 0;
@@ -428,7 +428,7 @@
     .lb-prev { left: 1rem; }
     .lb-next { right: 1rem; }
 
-    /* ââ SETUP BANNER ââ */
+    /*  SETUP BANNER  */
     #setup-banner {
       background: var(--off-white);
       border: 1px solid var(--stone);
@@ -464,7 +464,7 @@
       margin: 0.75rem 0 0 1.2rem;
     }
 
-    /* ââ ANIMATIONS ââ */
+    /*  ANIMATIONS  */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -480,7 +480,7 @@
       50%       { opacity: 0.7; transform: scaleY(1.15); }
     }
 
-    /* ââ PLACEHOLDER PHOTO (shown when no real images loaded) ââ */
+    /*  PLACEHOLDER PHOTO (shown when no real images loaded)  */
     .photo-placeholder {
       background: var(--stone);
       aspect-ratio: 3/4;
@@ -502,7 +502,7 @@
 
 
 
-    /* ââ DATE COMPOSITION ââ */
+    /*  DATE COMPOSITION  */
     .title-dates {
       opacity: 0;
       animation: fadeUp 1s ease 1.1s forwards;
@@ -557,7 +557,7 @@
       width: 3rem;
     }
 
-    /* ââ CTA BUTTONS ââ */
+    /*  CTA BUTTONS  */
     .cta-buttons {
       display: flex;
       gap: 1rem;
@@ -603,7 +603,7 @@
       border-color: var(--ink);
     }
 
-    /* ââ VIDEO SECTION ââ */
+    /*  VIDEO SECTION  */
     #video-section {
       padding: 6rem 2rem;
       background: var(--off-white);
@@ -691,7 +691,7 @@
 
   <!-- LIGHTBOX -->
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
-    <button class="lb-close" onclick="closeLightbox()">Close â</button>
+    <button class="lb-close" onclick="closeLightbox()">Close </button>
     <button class="lb-nav lb-prev" onclick="lbStep(-1)" aria-label="Previous">&#8592;</button>
     <img id="lb-img" src="" alt="" />
     <div class="lb-caption">
@@ -722,8 +722,8 @@
       Rooted in love, rising into possibility.
     </p>
     <div class="cta-buttons">
-      <a class="cta-btn cta-btn-outline" href="#chapter-birth">View the Photos â</a>
-      <a class="cta-btn cta-btn-filled" href="#video-section">Watch the Video â</a>
+      <a class="cta-btn cta-btn-outline" href="#chapter-birth">View the Photos </a>
+      <a class="cta-btn cta-btn-filled" href="#video-section">Watch the Video </a>
     </div>
 
     <div class="scroll-cue" onclick="document.getElementById('chapter-nav').scrollIntoView({behavior:'smooth'})">
@@ -816,7 +816,7 @@
           INSTRUCTIONS: Once your YouTube video is uploaded (unlisted),
           replace cPgfTd1sv_A below with the actual video ID.
           The ID is the part after ?v= in the YouTube URL.
-          Example: https://www.youtube.com/watch?v=dQw4w9WgXcQ â ID is dQw4w9WgXcQ
+          Example: https://www.youtube.com/watch?v=dQw4w9WgXcQ  ID is dQw4w9WgXcQ
         -->
         <div class="video-placeholder-box" id="video-placeholder">
           <p>Slideshow video coming soon</p>
@@ -825,7 +825,7 @@
         <iframe
           id="yt-embed"
           src="https://www.youtube.com/embed/cPgfTd1sv_A?rel=0&modestbranding=1&color=white"
-          title="Asher Maret â A Life in Photographs"
+          title="Asher Maret  A Life in Photographs"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
           style="display:none">
@@ -843,13 +843,13 @@
       with as much wonder as the ones<br />
       that brought you here.
     </p>
-    <p class="closing-date">Graduation Day Â· June 13, 2026</p>
+    <p class="closing-date">Graduation Day  June 13, 2026</p>
   </section>
 
   <script>
     /*
     ============================================================
-    PHOTOS DATA â ADD YOUR PHOTOS HERE
+    PHOTOS DATA  ADD YOUR PHOTOS HERE
     ============================================================
     Each entry:
       src:     Direct URL to image (must end in .jpg, .png, .webp, etc.)
@@ -889,7 +889,7 @@
   { src: "https://lh3.googleusercontent.com/pw/AP1GczNYrK8oelP4nz1N9Jg2-_r9wl6yHmJDb8QVAVnDjmjraFt-w2yysbRhKDc32D5o41lTvW4YCnUgD_8RfM85NCQ2b0v9HqxnukxVVXPgfYgxSZsqz3ZfMpV6Hd2S_NIcY0PhGkzuMbk79n9ib4tvBa4ekToyY7h1ij5ehUlLff0Kn0gL7hDLMSWyZBo1zVpOWzl_h7gIgSBccYhUbxzbyZsHS6996D0JdOk31aLMlXVl0wuROoo-VLzyyPQJkRJKJ4aJr-WYTIwwYfBxSqITutck-QFUksx4KW-fWiHTrcBMD7mRWDHf0j1G20YvzSBqgSOfqcPrXuvpLIK4srB2cg-tWtbvdbWymi6hnpjQPqOBYaPiriZLCfnEhqE95S-kZjdB6Zs4CZxuUuyHZt6zLOVwcAMNkEqpSN1bzvhCCSgHnyCMOLS4PGpfzMdlcCE8LQ05UmiLgZ7sn8O0nL3MjBeNFtWVx_5RTv6nCsTXdGF1om7pHLhLwDK-tj0GlgEXpUXuFE8Iu1afcqPoOTYavLT9AL_rmHt4Ryv-O-X2kBkS4UzdFnPbR5Q-s80j3maBXF3iCN-BlSrAL7l2Fg5yuzvtSf0tEmBQaYfmgdG2yWqGPaS_jtV1DAjgTbup9wgGRsjkEO6YdZXu4lKHpn3gjw8ONhal2C9Xc79iz9ZyJJPKI2ytn3P_-q6XcXgLeakSxcHrk4u3UcWLlwXhOS3FVzOg7Z_vcoEI02fegxcSvQY1EloNbTC40KU-Gd5c-5hS2ykpRvLRBGwXEN0KAxUxZL_ET3qzCIzVTm1GjEqaUd2kCrJ9blV6iTL7yrcZeCaJ3FtzmgN2QINrtJfBOzQ4oVpEPvgrA9qvmcMpW_N8FWnnEKJJopu0gDP5X6fr2O1IzYwOb0uvRKucO7xK1_NEwZPSvQEcOgXxgxBEKNGyLbexF_Y6gEcH_Jc6NAMQJZBsviaLDQBdC9M462Z_x3eA2oL5HiNzXAP7MAT9YcWQgdhVzQk=w1600-h1600", caption: "Apr 21, 2026", date: "Apr 21, 2026", chapter: "teen" }
 ];
 
-    // ââ Render photos into grids ââ
+    //  Render photos into grids 
     const grids = {
       birth:     document.getElementById('grid-birth'),
       childhood: document.getElementById('grid-childhood'),
@@ -947,7 +947,7 @@
       });
     }
 
-    // ââ Lightbox ââ
+    //  Lightbox 
     const lightbox = document.getElementById('lightbox');
     const lbImg    = document.getElementById('lb-img');
     const lbCapTxt = document.getElementById('lb-cap-text');
@@ -992,7 +992,7 @@
       if (e.key === 'Escape')     closeLightbox();
     });
 
-    // ââ Active nav highlight on scroll ââ
+    //  Active nav highlight on scroll 
     const sections = document.querySelectorAll('[id^="chapter-"], #video-section');
     const navLinks = document.querySelectorAll('.nav-chapters a');
 
@@ -1017,7 +1017,7 @@
       ytEmbed.style.display = 'block';
     }
 
-    // ââ Init ââ
+    //  Init 
     buildGrids();
   </script>
 
