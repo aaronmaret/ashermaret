@@ -1021,7 +1021,7 @@
     // Show YouTube embed only when a real ID is provided
     const ytEmbed = document.getElementById('yt-embed');
     const ytPlaceholder = document.getElementById('video-placeholder');
-    if (ytEmbed && !ytEmbed.src.includes('cPgfTd1sv_A')) {
+    if (ytEmbed && ytPlaceholder && !ytEmbed.src.includes('cPgfTd1sv_A')) {
       ytPlaceholder.style.display = 'none';
       ytEmbed.style.display = 'block';
     }
