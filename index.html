@@ -44,7 +44,7 @@
       text-align: center;
       padding: 4rem 2rem;
       position: relative;
-      background: var(--white);
+      background: #0d1b2e;
     }
 
     #title-page::before {
@@ -52,8 +52,9 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 40% at 20% 80%, rgba(196,168,130,0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 50% at 80% 20%, rgba(139,115,85,0.06) 0%, transparent 70%);
+        radial-gradient(ellipse 70% 50% at 15% 85%, rgba(42,100,150,0.35) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 60% at 85% 15%, rgba(122,175,212,0.15) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 50% 50%, rgba(26,42,58,0.4) 0%, transparent 80%);
       pointer-events: none;
     }
 
@@ -63,7 +64,7 @@
       font-size: 0.8rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: #7aafd4;
       margin-bottom: 2.5rem;
       opacity: 0;
       animation: fadeUp 1s ease 0.3s forwards;
@@ -74,7 +75,7 @@
       font-weight: 300;
       font-size: clamp(4rem, 9vw, 8rem);
       line-height: 1.05;
-      color: var(--ink);
+      color: #ffffff;
       letter-spacing: -0.01em;
       opacity: 0;
       animation: fadeUp 1s ease 0.6s forwards;
@@ -82,13 +83,13 @@
 
     .title-name em {
       font-style: italic;
-      color: var(--accent);
+      color: #7aafd4;
     }
 
     .title-rule {
       width: 60px;
       height: 1px;
-      background: var(--accent-light);
+      background: rgba(122,175,212,0.5);
       margin: 2.5rem auto;
       opacity: 0;
       animation: fadeIn 1s ease 1s forwards;
@@ -102,7 +103,7 @@
       font-style: italic;
       font-size: 1.2rem;
       line-height: 1.9;
-      color: var(--ink-light);
+      color: rgba(220,232,245,0.8);
       margin-top: 3rem;
       opacity: 0;
       animation: fadeUp 1s ease 1.4s forwards;
@@ -120,7 +121,7 @@
       opacity: 0;
       animation: fadeIn 1s ease 2s forwards;
       cursor: pointer;
-      color: var(--mid);
+      color: rgba(122,175,212,0.5);
     }
 
     .scroll-cue span {
@@ -519,7 +520,7 @@
       font-family: var(--serif);
       font-style: italic;
       font-size: 1.65rem;
-      color: var(--ink-light);
+      color: rgba(200,220,240,0.9);
       letter-spacing: 0.08em;
       width: 6rem;
       text-align: center;
@@ -528,7 +529,7 @@
     .title-dates-dash {
       font-family: var(--serif);
       font-size: 1.4rem;
-      color: var(--accent-light);
+      color: rgba(122,175,212,0.6);
       width: 3rem;
       text-align: center;
     }
@@ -547,7 +548,7 @@
       font-size: 0.72rem;
       letter-spacing: 0.15em;
       text-transform: lowercase;
-      color: var(--mid);
+      color: rgba(122,175,212,0.55);
       width: 6rem;
       text-align: center;
       white-space: nowrap;
@@ -581,26 +582,27 @@
     }
 
     .cta-btn-outline {
-      border: 1px solid var(--accent-light);
-      color: var(--accent);
+      border: 1px solid rgba(122,175,212,0.5);
+      color: rgba(200,225,245,0.9);
       background: transparent;
     }
 
     .cta-btn-outline:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: var(--white);
+      background: rgba(42,100,150,0.6);
+      border-color: #7aafd4;
+      color: #ffffff;
     }
 
     .cta-btn-filled {
-      background: var(--accent);
-      border: 1px solid var(--accent);
-      color: var(--white);
+      background: #2a6496;
+      border: 1px solid #2a6496;
+      color: #ffffff;
     }
 
     .cta-btn-filled:hover {
-      background: var(--ink);
-      border-color: var(--ink);
+      background: #7aafd4;
+      border-color: #7aafd4;
+      color: #0d1b2e;
     }
 
     /*  VIDEO SECTION  */
