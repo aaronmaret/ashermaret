@@ -619,7 +619,18 @@
     /*  VIDEO SECTION  */
     #video-section {
       padding: 6rem 2rem;
-      background: var(--off-white);
+      background: #0d1b2e;
+      position: relative;
+    }
+
+    #video-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 80%, rgba(42,100,150,0.3) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 20% 20%, rgba(122,175,212,0.12) 0%, transparent 65%);
+      pointer-events: none;
     }
 
     .video-section-inner {
@@ -634,7 +645,7 @@
       font-size: 0.75rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: #7aafd4;
       margin-bottom: 1rem;
     }
 
@@ -643,14 +654,14 @@
       font-size: clamp(2rem, 4vw, 3.2rem);
       font-weight: 300;
       font-style: italic;
-      color: var(--ink);
+      color: #ffffff;
       margin-bottom: 0.75rem;
     }
 
     .video-rule {
       width: 40px;
       height: 1px;
-      background: var(--accent-light);
+      background: rgba(122,175,212,0.5);
       margin: 1.5rem auto;
     }
 
