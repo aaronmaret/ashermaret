@@ -273,17 +273,17 @@
     .photo-grid {
       max-width: 900px;
       margin: 0 auto;
-      columns: 2;
-      column-gap: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
     }
 
     @media (min-width: 700px) {
-      .photo-grid { columns: 3; }
+      .photo-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     .photo-item {
-      break-inside: avoid;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0;
       cursor: pointer;
       position: relative;
       group: true;
