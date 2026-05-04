@@ -273,20 +273,13 @@
     .photo-grid {
       max-width: 900px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 700px) {
-      .photo-grid { grid-template-columns: repeat(3, 1fr); }
+      position: relative;
     }
 
     .photo-item {
-      margin-bottom: 0;
+      position: absolute;
+      box-sizing: border-box;
       cursor: pointer;
-      position: relative;
-      group: true;
     }
 
     .photo-item img {
@@ -1271,6 +1264,50 @@
 
     //  Init 
     buildGrids();
+    initMasonry();
+  
+  // Masonry layout — row-first (left→right), natural photo proportions
+  function masonryLayout(gridId) {
+    const grid = document.getElementById(gridId);
+    if (!grid) return;
+    const items = Array.from(grid.querySelectorAll('.photo-item'));
+    if (!items.length) return;
+    const GAP = 12;
+    const cols = window.innerWidth >= 700 ? 3 : 2;
+    const gridW = grid.offsetWidth;
+    const colW = Math.floor((gridW - GAP * (cols - 1)) / cols);
+    const heights = new Array(cols).fill(0);
+    items.forEach(item => {
+      item.style.width = colW + 'px';
+      const shortest = heights.indexOf(Math.min(...heights));
+      item.style.left = (shortest * (colW + GAP)) + 'px';
+      item.style.top = heights[shortest] + 'px';
+      heights[shortest] += item.offsetHeight + GAP;
+    });
+    grid.style.height = Math.max(...heights) + 'px';
+  }
+
+  function masonryAll() {
+    ['early','waldorf','starseeds','ohs'].forEach(masonryLayout);
+  }
+
+  function initMasonry() {
+    const imgs = Array.from(document.querySelectorAll('.photo-grid img'));
+    if (!imgs.length) return;
+    let pending = imgs.filter(i => !i.complete).length;
+    if (pending === 0) { masonryAll(); return; }
+    imgs.forEach(img => {
+      if (!img.complete) {
+        img.addEventListener('load',  () => { if (--pending <= 0) masonryAll(); }, {once:true});
+        img.addEventListener('error', () => { if (--pending <= 0) masonryAll(); }, {once:true});
+      }
+    });
+    setTimeout(masonryAll, 600);
+    setTimeout(masonryAll, 1500);
+  }
+
+  window.addEventListener('resize', masonryAll);
+
   </script>
 
 </body>
